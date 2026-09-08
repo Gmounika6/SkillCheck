@@ -234,6 +234,6 @@ input[type="radio"],input[type="checkbox"]{
 @media(max-width:450px){
     .dashboard{
         display: flex;
-        flex-direction: column;
+        gap:2rem;
     }
 }

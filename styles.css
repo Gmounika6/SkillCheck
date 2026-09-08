@@ -573,7 +573,7 @@ header .navbar a.active{
         font-size: 3rem;
     }
     .home{
-        min-height: 80vh;
+        min-height: 120vh;
     }
     .home_content {
         grid-template-columns: 1fr;
@@ -610,6 +610,7 @@ header .navbar a.active{
         max-width: max-content;
     }.overview img{
          width: 5rem;
+         height: 5rem;
     }
     button{
         height: 4rem;
@@ -622,4 +623,5 @@ header .navbar a.active{
     .opening img{
         display: none;
     }
+
 }
