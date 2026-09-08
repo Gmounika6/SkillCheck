@@ -608,6 +608,8 @@ header .navbar a.active{
     }
     .card{
         max-width: max-content;
+    }.overview img{
+         width: 5rem;
     }
     button{
         height: 4rem;
