@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analyse my skills</title>
+    <!-- custom css files link-->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="analyze.css" />
+    <!--here we linked two beacuse style.css is long but we want some styles to apply in analyze page also like nav bar so simply we linked to avoid writting again -->
+    <!--Link to include bootstamp icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <!--for icons like github, html ... we are linking devicon-->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <!--font style "inter got it from google fonts"-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--Header section which include nav bar etc-->
+    <header>
+      <!--checkbox and lable combo used hide and show the menu bar items-->
+      <input type="checkbox" name="" id="toggler" />
+      <label for="toggler"
+        ><i class="bi bi-three-dots-vertical" style="color: #7834b2"></i
+      ></label>
+      <a href="#" class="logo"
+        >Skill <span class="check">Check</span
+        ><img
+          src="images/logo.png"
+          alt="Skill check logo"
+          style="width: 55px; vertical-align: middle"
+        />
+      </a>
+      <nav class="navbar">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#how-it-works">How it works</a>
+        <a href="index.html#explore-roles">Explore roles</a>
+        <a href="index.html#my-analysis">My analysis</a>
+        <a href="index.html#about">About</a>
+      </nav>
+      <a href="#"><i class="bi bi-person-fill icon"></i></a>
+    </header>
+    <div class="titel main-titel">
+      <i class="bi bi-pie-chart-fill"></i>
+      <div>
+        <h1>Analyze your skills</h1>
+        <p>
+          Choose the target role and tell us about the skills you currently
+          have.
+        </p>
+      </div>
+    </div>
+    <section class="user-input">
+      <div class="role-selection">
+        <div class="label">
+          <i class="bi bi-briefcase-fill"></i>
+          <div class="sub-label">
+            <h2>Select your Target Role</h2>
+            <p>Choose the role you want to analyze.</p>
+          </div>
+        </div>
+
+        <div class="target-role">
+          <!-- <select> creates the dropdown menu -->
+          <!-- id="role" gives this dropdown a unique identity -->
+          <select id="role">
+            <!--
+        This is the first text shown in the dropdown.
+        
+        selected = shows this option initially
+        disabled = user cannot select this as a role
+        value="" = gives it an empty value
+    -->
+            <option value="" selected disabled>Select a role</option>
+
+            <!-- Each <option> creates one choice in the dropdown -->
+
+            <!-- value="frontend" is the value JavaScript can use later -->
+            <!-- "Frontend Developer" is what the user sees -->
+            <option value="frontend">Frontend Developer</option>
+
+            <option value="ui">UI Developer</option>
+
+            <option value="web">Web Developer</option>
+
+            <option value="javascript">JavaScript Developer</option>
+
+            <option value="web-ui">Web UI Designer</option>
+
+            <!-- Closing the dropdown -->
+          </select>
+        </div>
+      </div>
+      <div class="skills-selection">
+        <div class="label">
+          <i class="bi bi-lightbulb-fill"></i>
+          <div class="sub-label">
+            <h2>Select your Skills & Proficiency</h2>
+            <p>
+              Select the skills you know and rate your proficiency level of
+              each.
+            </p>
+          </div>
+        </div>
+        <div class="popup" id="role-popup">
+          <i class="bi bi-exclamation-circle"></i>Please select a role first.
+        </div>
+        <!--frontend and ui skills-->
+        <div class="skills-list frontend ui">
+          <!--html skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="html-skill" />
+
+            <i class="devicon-html5-plain colored"></i>
+
+            <label for="html-skill">HTML</label>
+            <label
+              ><input type="radio" name="html-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="html-level"
+                value="intermediate"
+              /><span class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="html-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--css skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="css-skill" />
+
+            <i class="devicon-css3-plain colored"></i>
+
+            <label for="css-skill">CSS</label>
+            <label
+              ><input type="radio" name="css-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input type="radio" name="css-level" value="intermediate" /><span
+                class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="css-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--js skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="js-skill" />
+
+            <i class="devicon-javascript-plain colored"></i>
+
+            <label for="js-skill">JavaScript</label>
+            <label
+              ><input type="radio" name="js-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input type="radio" name="js-level" value="intermediate" /><span
+                class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="js-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--react skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="react-skill" />
+
+            <i class="devicon-react-original colored"></i>
+
+            <label for="react-skill">React</label>
+            <label
+              ><input type="radio" name="react-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="react-level"
+                value="intermediate"
+              /><span class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="react-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--git skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="git-skill" />
+
+            <i class="devicon-github-original colored"></i>
+
+            <label for="git-skill">Git/GitHub</label>
+            <label
+              ><input type="radio" name="git-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input type="radio" name="git-level" value="intermediate" /><span
+                class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="git-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--responsive design skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="responsive-skill" /><span
+              style="color: #009688"
+              ><i class="bi bi-pc-display"></i
+            ></span>
+
+            <label for="responsive-skill">Responsive Design</label>
+            <label
+              ><input
+                type="radio"
+                name="responsive-level"
+                value="beginner"
+              /><span class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="responsive-level"
+                value="intermediate"
+              /><span class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="responsive-level"
+                value="advanced"
+              /><span class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+        </div>
+        <!--web developer skills-->
+        <div class="skills-list web">
+          <!--html skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="html-skill" />
+
+            <i class="devicon-html5-plain colored"></i>
+
+            <label for="html-skill">HTML</label>
+            <label
+              ><input type="radio" name="html-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="html-level"
+                value="intermediate"
+              /><span class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="html-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--css skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="css-skill" />
+
+            <i class="devicon-css3-plain colored"></i>
+
+            <label for="css-skill">CSS</label>
+            <label
+              ><input type="radio" name="css-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input type="radio" name="css-level" value="intermediate" /><span
+                class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="css-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--js skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="js-skill" />
+
+            <i class="devicon-javascript-plain colored"></i>
+
+            <label for="js-skill">JavaScript</label>
+            <label
+              ><input type="radio" name="js-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input type="radio" name="js-level" value="intermediate" /><span
+                class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="js-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--backend technology skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="backend-skill" />
+            <span style="color: #1565c0"><i class="bi bi-server"></i></span>
+
+            <label for="backend-skill">Backend Technology</label>
+            <div class="technologies">
+              <label
+                ><input type="radio" name="technology" value="node" />
+
+                <i class="devicon-nodejs-plain-wordmark colored"></i>
+              </label>
+              <label
+                ><input type="radio" name="technology" value="java" />
+                <i class="devicon-java-plain-wordmark colored"></i>
+              </label>
+              <label
+                ><input type="radio" name="technology" value="python" />
+                <i class="devicon-python-plain-wordmark colored"></i>
+              </label>
+              <label
+                ><input type="radio" name="technology" value="php" />
+                <i class="devicon-php-plain colored"></i>
+              </label>
+            </div>
+            <label
+              ><input type="radio" name="backend-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="backend-level"
+                value="intermediate"
+              /><span class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="backend-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--database skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="database-skill" /><span
+              style="color: #00897b"
+              ><i class="bi bi-database-fill"></i
+            ></span>
+
+            <label for="database-skill">Database</label>
+            <div class="technologies">
+              <label
+                ><input type="radio" name="database" value="sql" /><i
+                  class="devicon-azuresqldatabase-plain colored"
+                ></i
+              ></label>
+              <label
+                ><input type="radio" name="database" value="oracle" /><i
+                  class="devicon-oracle-original colored"
+                  style="font-size: 5rem"
+                ></i>
+              </label>
+            </div>
+            <label
+              ><input
+                type="radio"
+                name="database-level"
+                value="beginner"
+              /><span class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="database-level"
+                value="intermediate"
+              /><span class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="database-level"
+                value="advanced"
+              /><span class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--ApI's-->
+          <div class="skill-row">
+            <input type="checkbox" id="api-skill" />
+            <span style="color: #2196f3"><i class="bi bi-plug-fill"></i></span>
+
+            <label for="api-skill">API's</label>
+            <div class="technologies">
+              <label
+                ><input type="radio" name="api" value="fastapi" />
+                <i
+                  class="devicon-fastapi-plain-wordmark colored"
+                  style="font-size: 5rem"
+                ></i
+              ></label>
+              <label
+                ><input type="radio" name="api" value="openapi" /><i
+                  class="devicon-openapi-plain-wordmark colored"
+                  style="font-size: 5rem"
+                ></i
+              ></label>
+            </div>
+            <label
+              ><input type="radio" name="api-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input type="radio" name="api-level" value="intermediate" /><span
+                class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="api-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--git skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="git-skill" />
+
+            <i class="devicon-github-original colored"></i>
+
+            <label for="git-skill">Git/GitHub</label>
+            <label
+              ><input type="radio" name="git-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input type="radio" name="git-level" value="intermediate" /><span
+                class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="git-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+        </div>
+        <!--js developer skills-->
+        <div class="skills-list javascript">
+          <!--js skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="js-skill" />
+
+            <i class="devicon-javascript-plain colored"></i>
+
+            <label for="js-skill">JavaScript</label>
+            <label
+              ><input type="radio" name="js-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input type="radio" name="js-level" value="intermediate" /><span
+                class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="js-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--html skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="html-skill" />
+
+            <i class="devicon-html5-plain colored"></i>
+
+            <label for="html-skill">HTML</label>
+            <label
+              ><input type="radio" name="html-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="html-level"
+                value="intermediate"
+              /><span class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="html-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--css skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="css-skill" />
+
+            <i class="devicon-css3-plain colored"></i>
+
+            <label for="css-skill">CSS</label>
+            <label
+              ><input type="radio" name="css-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input type="radio" name="css-level" value="intermediate" /><span
+                class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="css-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--node.js skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="node-skill" />
+
+            <i class="devicon-nodejs-plain-wordmark colored"></i>
+
+            <label for="node-skill">Node.js</label>
+            <label
+              ><input type="radio" name="node-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="node-level"
+                value="intermediate"
+              /><span class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="node-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--ApI's-->
+          <div class="skill-row">
+            <input type="checkbox" id="api-skill" />
+            <span style="color: #2196f3"><i class="bi bi-plug-fill"></i></span>
+
+            <label for="api-skill">API's</label>
+            <div class="technologies">
+              <label
+                ><input type="radio" name="api" value="fastapi" />
+                <i
+                  class="devicon-fastapi-plain-wordmark colored"
+                  style="font-size: 5rem"
+                ></i
+              ></label>
+              <label
+                ><input type="radio" name="api" value="openapi" /><i
+                  class="devicon-openapi-plain-wordmark colored"
+                  style="font-size: 5rem"
+                ></i
+              ></label>
+            </div>
+            <label
+              ><input type="radio" name="api-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input type="radio" name="api-level" value="intermediate" /><span
+                class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="api-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--git skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="git-skill" />
+
+            <i class="devicon-github-original colored"></i>
+
+            <label for="git-skill">Git/GitHub</label>
+            <label
+              ><input type="radio" name="git-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input type="radio" name="git-level" value="intermediate" /><span
+                class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="git-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+        </div>
+        <!--web ui desiner skills-->
+        <div class="skills-list web-ui">
+          <!--ui/ux skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="uiux-skill" />
+            <span style="color: #e91e63"><i class="bi bi-brush-fill"></i></span>
+
+            <label for="uiux-skill">UI/UX design</label>
+            <label
+              ><input type="radio" name="ui/ux-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="ui/ux-level"
+                value="intermediate"
+              /><span class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="ui/ux-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--figma skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="figma-skill" />
+
+            <i class="devicon-figma-plain colored"></i>
+
+            <label for="figma-skill">Figma</label>
+            <label
+              ><input type="radio" name="figma-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="figma-level"
+                value="intermediate"
+              /><span class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="figma-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--typography-->
+          <div class="skill-row">
+            <input type="checkbox" id="typography-skill" />
+            <span style="color: #9c27b0"><i class="bi bi-fonts"></i></span>
+
+            <label for="typography-skill">Typography</label>
+            <label
+              ><input
+                type="radio"
+                name="typography-level"
+                value="beginner"
+              /><span class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="typography-level"
+                value="intermediate"
+              /><span class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="typography-level"
+                value="advanced"
+              /><span class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--color theory skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="color-skill" />
+            <span style="color: #ff9800"
+              ><i class="bi bi-palette-fill"></i
+            ></span>
+
+            <label for="color-skill">Color Theory</label>
+            <label
+              ><input type="radio" name="color-level" value="beginner" /><span
+                class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="color-level"
+                value="intermediate"
+              /><span class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input type="radio" name="color-level" value="advanced" /><span
+                class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--responsive design skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="responsive-skill" />
+            <span style="color: #009688"><i class="bi bi-pc-display"></i></span>
+            <label for="responsive-skill">Responsive Design</label>
+            <label
+              ><input
+                type="radio"
+                name="responsive-level"
+                value="beginner"
+              /><span class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="responsive-level"
+                value="intermediate"
+              /><span class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="responsive-level"
+                value="advanced"
+              /><span class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+          <!--prototyping skill-->
+          <div class="skill-row">
+            <input type="checkbox" id="prototyping-skill" />
+            <span style="color: #673ab7"><i class="bi bi-bezier"></i></span>
+
+            <label for="prototyping-skill">Prototyping</label>
+            <label
+              ><input
+                type="radio"
+                name="prototyping-level"
+                value="beginner"
+              /><span class="level first"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Beginner</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="prototyping-level"
+                value="intermediate"
+              /><span class="level second"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Intermediate</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="prototyping-level"
+                value="advanced"
+              /><span class="level third"
+                ><i class="bi bi-bar-chart-fill"></i></span
+              >Advanced</label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="analyze">
+        <a class="btn" href="#dashboard">Analyze</a>
+        <div class="popup" id="role-popup">
+          <i class="bi bi-exclamation-circle"></i>Please select your role,
+          skills, and proficiency levels before analyzing.
+        </div>
+      </div>
+    </section>
+    <div class="result">
+      <div class="titel result-titel">
+        <i class="bi bi-clipboard-data-fill"></i>
+        <div>
+          <h1>Your analysis result</h1>
+          <p>
+            See how your skills match your target role and what you need to
+            improve.
+          </p>
+        </div>
+      </div>
+      <section id="dashboard">
+        <div class="dashboard-content">
+          <div class="dashboard">
+            <div class="donut"></div>
+            <div class="percentages">
+              <div class="message" style="margin-bottom: 1rem">
+                <h2></h2>
+                <p></p>
+              </div>
+              <p class="prepared"></p>
+              <p class="gap"></p>
+            </div>
+          </div>
+          <div class="roadmap">
+            <div class="skill skill-1">
+              <div class="box">
+                <p class="skill-icon"></p>
+                <h2 class="skill-name"></h2>
+              </div>
+              <p class="gap"></p>
+              <h2>What to learn next</h2>
+              <ul class="roadmap-topics"></ul>
+            </div>
+            <div class="skill skill-2">
+              <div class="box">
+                <p class="skill-icon"></p>
+                <h2 class="skill-name"></h2>
+              </div>
+              <p class="gap"></p>
+              <h2>What to learn next</h2>
+              <ul class="roadmap-topics"></ul>
+            </div>
+            <div class="skill skill-3">
+              <div class="box">
+                <p class="skill-icon"></p>
+                <h2 class="skill-name"></h2>
+              </div>
+              <p class="gap"></p>
+              <h2>What to learn next</h2>
+              <ul class="roadmap-topics"></ul>
+            </div>
+            <div class="skill skill-4">
+              <div class="box">
+                <p class="skill-icon"></p>
+                <h2 class="skill-name"></h2>
+              </div>
+              <p class="gap"></p>
+              <h2>What to learn next</h2>
+              <ul class="roadmap-topics"></ul>
+            </div>
+            <div class="skill skill-5">
+              <div class="box">
+                <p class="skill-icon"></p>
+                <h2 class="skill-name"></h2>
+              </div>
+              <p class="gap"></p>
+              <h2>What to learn next</h2>
+              <ul class="roadmap-topics"></ul>
+            </div>
+            <div class="skill skill-6">
+              <div class="box">
+                <p class="skill-icon"></p>
+                <h2 class="skill-name"></h2>
+              </div>
+              <p class="gap"></p>
+              <h2>What to learn next</h2>
+              <ul class="roadmap-topics"></ul>
+            </div>
+            <div class="skill skill-7">
+              <div class="box">
+                <p class="skill-icon"></p>
+                <h2 class="skill-name"></h2>
+              </div>
+              <p class="gap"></p>
+              <h2>What to learn next</h2>
+              <ul class="roadmap-topics"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!--lick the extenal js to the code-->
+    <script src="script.js" charset="UTF-8"></script>
+    <script src="data.js" charset="UTF-8"></script>
+    <script src="analyze.js" charset="UTF-8"></script>
+  </body>
+</html>

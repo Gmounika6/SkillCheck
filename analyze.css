@@ -1,0 +1,239 @@
+:root{/*here violet is the variable that stores the value(color) pink root is focused in html tag(entire document) what to change color in future just change var value*/
+    --violet:#7834b2; 
+}
+.titel{
+    background-color:var(--violet) ;
+    padding: 13rem 2rem 3rem 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+}
+.main-titel i{
+    background-color: var(--violet);
+}
+.role-selection,.skills-selection{
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(174, 111, 238, 0.5);
+    margin-bottom: 3rem;
+}
+.skills-selection{
+    display: flex;
+    flex-direction: column;
+}
+.label{
+    display: flex;
+    gap: 2rem;
+}
+.label i{
+    color: var(--violet);
+}
+.sub-label h2{
+    font-size: 2rem;
+}
+.sub-label p{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.user-input{
+    display: flex;
+    flex-direction: column;
+}
+.target-role select{
+    margin-left: 6rem;
+    width: 90%;
+    border: .4rem solid var(--violet);
+    padding: 1.3rem;
+    border-radius: .5rem;
+    font-size: 1.7rem;
+}
+.skills-list{
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    gap: 2rem;
+}
+.skill-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px rgba(174, 111, 238, 0.5);
+}
+/*to hide the skills list of all the roles*/
+.frontend,.ui,.web,.javascript,.web-ui{
+    display: none;
+}
+.skill-row i{
+    margin-left: 1rem;
+    font-size: 3.5rem;
+}
+.level i{
+    font-size: 1.5rem;
+    margin: 0 1rem;
+}
+.first i{
+    color:green;
+}
+.second i{
+    color: orange;
+}
+.third i{
+    color: red;
+}
+.technologies{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: .5rem;
+}
+.technologies label{
+    display: flex;
+    align-items: center;
+}
+/*to change the default color of the check box tick and radio button fill color*/
+input[type="radio"],input[type="checkbox"]{
+    accent-color: var(--violet);
+}
+.analyze{
+    display: flex;
+    justify-content: center;
+}
+.analyze .btn{
+    padding: 2rem 3rem;
+    background-color:grey;
+}
+/*popup message*/
+.popup{
+    align-self: flex-end;
+    color: #d32f2f;
+    border-radius:.5rem;
+    font-size: 1.8rem;
+    background:#fde8e8;
+    padding: 1.8rem;
+    text-align: center;
+    display: none;
+}
+.popup i{
+    background-color: transparent;
+    font-size: 2rem;
+    margin-right: .5rem;
+}
+.result-titel{
+    padding: 2rem;
+
+}
+.result-titel i{
+     background-color: transparent;
+}
+.dashboard-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.dashboard-content p{
+    font-size: 1.7rem;
+}
+.dashboard-content h2{
+    color: var(--violet);
+    font-size: 2rem;
+}
+.dashboard{
+    display: flex;
+    gap: 5rem;
+}
+.percentages{
+    padding: 4rem 0;
+}
+.percentages .prepared span,
+.percentages .gap span{
+    color: var(--violet);
+    font-weight: bold;
+}
+.roadmap{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.roadmap .skill{
+    max-width: 23rem;
+    box-shadow: 0 2px 10px rgba(174, 111, 238, 0.5);
+    border-radius: 2rem;
+    padding: 2rem;
+}
+/* Donut chart */
+.donut{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+
+    /* The JavaScript will change this value */
+    background: conic-gradient(
+        var(--violet) 0% 0%,
+        #e4d5f5 0% 100%
+    );
+
+    /* Create the hole in the middle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    /* Needed for the percentage */
+    position: relative;
+}
+
+/* This creates the white hole inside the donut */
+.donut::after{
+    content: "";
+    width: 13rem;
+    height: 13rem;
+    background: white;
+    border-radius: 50%;
+}
+/* Percentage inside the donut */
+.donut::before{
+    content: attr(data-percentage);
+    position: absolute;
+    z-index: 1;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.box{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.skill-icon i{
+    font-size: 2.3rem;
+}
+.gap{
+    font-weight: 550;
+    margin-bottom: 1rem;
+}
+.roadmap-topics{
+    font-size: 1.7rem;
+    padding:  0 1.5rem;
+}
+.result{
+    display: none;
+}
+
+
+
+
+
+
+@media(max-width:768px){
+    .skill-row{
+        justify-content:initial;
+        gap: 3rem;
+    }
+}
+
+@media(max-width:450px){
+    .dashboard{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Gap Analyzer</title>
+    <!-- custom css file link-->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="analyze.css" />
+    <!--Link to include bootstamp icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <!--for icons like github, html ... we are linking devicon-->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <!--font style "inter got it from google fonts"-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--Header section which include nav bar etc-->
+    <header>
+      <!--checkbox and lable combo used hide and show the menu bar items-->
+      <input type="checkbox" name="" id="toggler" />
+      <label for="toggler"
+        ><i class="bi bi-three-dots-vertical" style="color: #7834b2"></i
+      ></label>
+      <a href="#" class="logo"
+        >Skill <span class="check">Check</span
+        ><img
+          src="images/logo.png"
+          alt="Skill check logo"
+          style="width: 55px; vertical-align: middle"
+        />
+      </a>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#explore-roles">Explore roles</a>
+        <a href="#my-analysis">My analysis</a>
+        <a href="#about">About</a>
+      </nav>
+      <a href="#"><i class="bi bi-person-fill icon"></i></a>
+    </header>
+    <!--home section-->
+    <section class="home" id="home">
+      <div class="home_content">
+        <div class="left_content">
+          <h3>
+            Skill <span class="check_home">Check</span>
+            <img src="images/logo.png" alt="Skill check logo" />
+          </h3>
+          <span>A skill gap Analyzer</span>
+          <p>
+            Discover Your Skill Gap. Build Your Career. <br />Compare your
+            skills with the requirements of your target role and discover what
+            you need to learn next.<br /><br /><span class="tagline"
+              >Select your role • Add your skills • Get your personalized
+              analysis</span
+            >
+          </p>
+        </div>
+        <div class="analyze_btn">
+          <a href="analyze.html" class="btn home_btn">Analyze my skills</a
+          ><!--open external file that is analyze html file when clicked-->
+        </div>
+        <div class="right_content">
+          <div class="feature">
+            <img src="images/role match.png" alt="role match picture" />
+            <div class="info">
+              <h2>Role match</h2>
+              <span>see how close you are</span>
+            </div>
+          </div>
+          <div class="feature">
+            <img src="images/skill gap.png" alt="skill gap picture" />
+            <div class="info">
+              <h2>Skill gap</h2>
+              <span>find what you're missing</span>
+            </div>
+          </div>
+          <div class="feature">
+            <img src="images/road map.png" alt="road map picture" />
+            <div class="info">
+              <h2>Road map</h2>
+              <span>know what to learn next</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--how it works section-->
+    <section class="how_it_works" id="how-it-works">
+      <h1 class="heading">how it works</h1>
+      <div class="how_it_works_content">
+        <p class="line">Understand where you stand and what to learn next.</p>
+        <div class="cards">
+          <div class="card">
+            <i class="bi bi-1-circle-fill"></i
+            ><i class="bi bi-person-bounding-box icon"></i>
+            <h2>Select your role</h2>
+            <p>
+              Choose the role you want to work towards, such as Frontend
+              Developer or UI Developer.
+            </p>
+          </div>
+          <div class="card">
+            <i class="bi bi-2-circle-fill"></i>
+            <i class="bi bi-code-slash icon"></i>
+            <h2>Add Your Skills</h2>
+            <p>
+              Select the skills you currently have, such as HTML, CSS, and
+              JavaScript.
+            </p>
+          </div>
+          <div class="card">
+            <i class="bi bi-3-circle-fill"></i
+            ><i class="bi bi-bar-chart-line icon"></i>
+            <h2>Analyze Your Skills</h2>
+            <p>
+              SkillGap compares your skills with the requirements of your
+              selected role and calculates your Role Match.
+            </p>
+          </div>
+          <div class="card">
+            <i class="bi bi-4-circle-fill"></i
+            ><i class="bi bi-signpost-split icon"></i>
+            <h2>Get Your Roadmap</h2>
+            <p>
+              View your matched skills, skill gaps, readiness level, estimated
+              learning time, and a simple roadmap to improve.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--explore roles section-->
+    <section class="explore-roles" id="explore-roles">
+      <h1 class="heading">explore roles</h1>
+      <div class="explore-roles-content">
+        <p class="line">
+          Explore the roles and discover the skills needed to get there.
+        </p>
+        <div class="roles">
+          <div
+            class="role"
+            style="border-color: #7439d3; box-shadow: 0 0 10px #7439d3"
+          >
+            <div class="overview">
+              <img
+                src="images/frontend developer.png"
+                alt="frontend developer"
+              />
+              <div class="info">
+                <h2 style="color: #7439d3">Frontend developer</h2>
+                <span
+                  >build responsive and interactive web experiences for
+                  users.</span
+                >
+              </div>
+              <button
+                class="frontend-view-details-btn view-details"
+                style="background-color: #7439d3"
+              >
+                view details
+              </button>
+            </div>
+            <div class="details">
+              <p class="description">
+                A <span style="color: #7439d3">Frontend Developer</span> builds
+                the visual and interactive parts of websites and web
+                applications. They turn designs and ideas into responsive,
+                user-friendly interfaces that work smoothly across different
+                devices and screen sizes.
+              </p>
+              <div class="responsibilities">
+                <h3 style="color: #7439d3">Key responsibilities :</h3>
+                <ul>
+                  <li>Create website structures using HTML</li>
+                  <li>Style and design interfaces using CSS</li>
+                  <li>Add interactivity and functionality using JavaScript</li>
+                  <li>Build reusable interfaces using React</li>
+                  <li>Ensure websites are responsive and accessible</li>
+                  <li>Use Git/GitHub for version control and collaboration</li>
+                </ul>
+              </div>
+              <div class="skills-container">
+                <h3 style="color: #7439d3">
+                  Skills required and their importance:
+                </h3>
+                <div class="skills frontend-skills">
+                  <span>HTML <span style="color: #333">20%</span></span>
+                  <span>CSS <span style="color: #333">20%</span></span>
+                  <span>JavaScript <span style="color: #333">30%</span></span>
+                  <span>react <span style="color: #333">20%</span></span>
+                  <span>Git/GitHub <span style="color: #333">5%</span></span>
+                  <span
+                    >responsive design <span style="color: #333">5%</span></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="role"
+            style="
+              border-color: rgb(59, 59, 238);
+              box-shadow: 0 0 10px rgb(59, 59, 238);
+            "
+          >
+            <div class="overview">
+              <img src="images/ui developer.png" alt="ui developer" />
+              <div class="info">
+                <h2 style="color: rgb(59, 59, 238)">UI Developer</h2>
+                <span
+                  >design clean and beautiful user interfaces for modern
+                  websites.</span
+                >
+              </div>
+              <button
+                class="ui-view-details-btn view-details"
+                style="background-color: rgb(59, 59, 238)"
+              >
+                view details
+              </button>
+            </div>
+            <div class="details">
+              <p class="description">
+                A
+                <span style="color: rgb(59, 59, 238)">UI Developer</span>
+                focuses on creating clean, attractive, and user-friendly
+                interfaces for websites and web applications. They combine
+                design principles with frontend technologies to turn visual
+                designs into responsive and interactive web pages.
+              </p>
+              <div class="responsibilities">
+                <h3 style="color: rgb(59, 59, 238)">key responsibilities :</h3>
+
+                <ul>
+                  <li>Build user interfaces using HTML, CSS, and JavaScript</li>
+                  <li>Convert UI designs into functional web pages</li>
+                  <li>Create responsive layouts for different screen sizes</li>
+                  <li>
+                    Implement interactive elements and components using
+                    JavaScript and React
+                  </li>
+                  <li>
+                    Maintain consistent layouts, typography, colors, and spacing
+                  </li>
+                  <li>Ensure a smooth and intuitive user experience</li>
+                </ul>
+              </div>
+              <div class="skills-container">
+                <h3 style="color: rgb(59, 59, 238)">
+                  Skills required and their importance :
+                </h3>
+                <div class="skills ui-skills">
+                  <span>HTML <span style="color: #333">20%</span></span>
+                  <span>CSS <span style="color: #333">35%</span></span>
+                  <span>JavaScript <span style="color: #333">20%</span></span>
+                  <span>React <span style="color: #333">15%</span></span>
+                  <span>Git/GitHub <span style="color: #333">2%</span></span>
+                  <span
+                    >responsive Design <span style="color: #333">8%</span></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="role"
+            style="border-color: #087a32; box-shadow: 0 0 10px #087a32"
+          >
+            <div class="overview">
+              <img src="images/web developer.png" alt="web developer" />
+              <div class="info">
+                <h2 style="color: #087a32">Web developer</h2>
+                <span
+                  >develope and maintain websites using core web
+                  technologies.</span
+                >
+              </div>
+              <button
+                class="web-view-details-btn view-details"
+                style="background-color: #087a32"
+              >
+                view details
+              </button>
+            </div>
+            <div class="details">
+              <p class="description">
+                A <span style="color: #087a32">Web Developer</span> builds and
+                maintains websites and web applications, working across both the
+                frontend and backend to create functional and reliable web
+                experiences.
+              </p>
+              <div class="responsibilities">
+                <h3 style="color: #087a32">key responsibilities :</h3>
+
+                <ul>
+                  <li>Build web pages using HTML, CSS, and JavaScript</li>
+                  <li>
+                    Develop backend functionality using backend technologies
+                  </li>
+                  <li>
+                    Work with databases to store and manage application data
+                  </li>
+                  <li>Integrate and work with APIs</li>
+                  <li>Connect frontend interfaces with backend services</li>
+                  <li>Use Git/GitHub for version control and collaboration</li>
+                </ul>
+              </div>
+              <div class="skills-container">
+                <h3 style="color: #087a32">
+                  Skills required and their importance:
+                </h3>
+                <div class="skills web-skills">
+                  <span>HTML <span style="color: #333">15%</span></span>
+                  <span>CSS <span style="color: #333">10%</span></span>
+                  <span>JavaScript <span style="color: #333">20%</span></span>
+                  <span
+                    >Backend Technology
+                    <span style="color: #333">25%</span></span
+                  >
+                  <span>Database <span style="color: #333">15%</span></span>
+                  <span>APIs <span style="color: #333"></span>10%</span>
+                  <span>Git/GitHub <span style="color: #333"> 5%</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="role role-hide"
+            style="border-color: #e86f00; box-shadow: 0 0 10px #e86f00"
+          >
+            <div class="overview">
+              <img
+                src="images/javascript developer.png"
+                alt=" JavaScript developer"
+              />
+              <div class="info">
+                <h2 style="color: #e86f00">JavaScript developer</h2>
+                <span> build dynamic and powerful web applications.</span>
+              </div>
+              <button
+                class="js-view-details-btn view-details"
+                style="background-color: #e86f00"
+              >
+                view details
+              </button>
+            </div>
+            <div class="details">
+              <p class="description">
+                A
+                <span style="color: #e86f00">JavaScript Developer</span>
+                specializes in building dynamic and interactive web applications
+                using JavaScript and its related technologies. They create
+                responsive user experiences and develop functionality that
+                connects web interfaces with APIs and backend services.
+              </p>
+              <div class="responsibilities">
+                <h3 style="color: #e86f00">key responsibilities :</h3>
+
+                <ul>
+                  <li>Build dynamic web features using JavaScript</li>
+                  <li>Create interactive interfaces using HTML and CSS</li>
+                  <li>Develop server-side functionality using Node.js</li>
+                  <li>Integrate and work with APIs</li>
+                  <li>Handle application logic and user interactions</li>
+                  <li>Use Git/GitHub for version control and collaboration</li>
+                </ul>
+              </div>
+              <div class="skills-container">
+                <h3 style="color: #e86f00">
+                  Skills required and their importance:
+                </h3>
+                <div class="skills js-skills">
+                  <span>JavaScript <span style="color: #333">40%</span></span>
+                  <span>HTML <span style="color: #333">10%</span></span>
+                  <span>CSS <span style="color: #333">15%</span></span>
+                  <span>Node.js <span style="color: #333">15%</span></span>
+                  <span>APIs <span style="color: #333">15%</span></span>
+                  <span>Git/GitHub <span style="color: #333">5%</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="role role-hide"
+            style="border-color: #10c5d5; box-shadow: 0 0 10px #10c5d5"
+          >
+            <div class="overview">
+              <img src="images/web ui desiner.png" alt="web ui developer" />
+              <div class="info">
+                <h2 style="color: #10c5d5">Web UI designer</h2>
+                <span
+                  >design user-friendly layouts and bring ideas to life
+                  visually.</span
+                >
+              </div>
+              <button
+                class="web-ui-view-details-btn view-details"
+                style="background-color: #10c5d5"
+              >
+                view details
+              </button>
+            </div>
+            <div class="details">
+              <p class="description">
+                A <span style="color: #10c5d5">Web UI Designer</span> creates
+                visually appealing, intuitive, and user-friendly interfaces for
+                websites and web applications. They focus on the visual
+                experience, ensuring that layouts, colors, typography, and
+                interactions work together effectively.
+              </p>
+              <div class="responsibilities">
+                <h3 style="color: #10c5d5">key responsibilities :</h3>
+
+                <ul>
+                  <li>Design website interfaces using UI/UX principles</li>
+                  <li>Create wireframes and prototypes using Figma</li>
+                  <li>
+                    Choose appropriate colors, typography, and visual elements
+                  </li>
+                  <li>Design responsive layouts for different screen sizes</li>
+                  <li>Create user flows and interactive prototypes</li>
+                  <li>
+                    Maintain consistency across different pages and components
+                  </li>
+                </ul>
+              </div>
+              <div class="skills-container">
+                <h3 style="color: #10c5d5">
+                  Skills required and their importance:
+                </h3>
+                <div class="skills web-ui-skills">
+                  <span>UI/UX design <span style="color: #333">25%</span></span>
+                  <span>Figma <span style="color: #333">20%</span></span>
+                  <span>Typography <span style="color: #333">15%</span></span>
+                  <span>color theory <span style="color: #333">15%</span></span>
+                  <span
+                    >Responsive design
+                    <span style="color: #333">10%</span></span
+                  >
+                  <span>Prototyping <span style="color: #333">15%</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="show-more">
+            show more<i class="bi bi-arrow-down-short"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--my analysis section-->
+    <section class="my-analysis" id="my-analysis">
+      <h1 class="heading">my analysis</h1>
+      <div class="my-analysis-content">
+        <p class="line">
+          View and track your previously analyzed roles and skill gaps
+        </p>
+        <div class="history-container">
+          <div class="history first-analysis">
+            <h2 class="name"></h2>
+            <a class="remove">
+              <i class="bi bi-trash3"></i>
+            </a>
+          </div>
+          <div class="history second-analysis">
+            <h2 class="name"></h2>
+            <a class="remove">
+              <i class="bi bi-trash3"></i>
+            </a>
+          </div>
+          <div class="history third-analysis">
+            <h2 class="name"></h2>
+            <a class="remove">
+              <i class="bi bi-trash3"></i>
+            </a>
+          </div>
+          <div class="history forth-analysis">
+            <h2 class="name"></h2>
+            <a class="remove">
+              <i class="bi bi-trash3"></i>
+            </a>
+          </div>
+          <div class="history fifth-analysis">
+            <h2 class="name"></h2>
+            <a class="remove">
+              <i class="bi bi-trash3"></i>
+            </a>
+          </div>
+        </div>
+        <div class="empty-state">
+          <img src="images/logo.png" alt="logo" />
+          <h2>No Analysis Yet</h2>
+          <p>You haven't analyzed your skills for any role yet.</p>
+          <p>
+            Start your first analysis to discover where you stand and what you
+            need to improve.
+          </p>
+          <div class="analyze_btn">
+            <a href="analyze.html" class="btn home_btn analysis_btn"
+              >Start your analysis</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--about section-->
+    <section class="about" id="about">
+      <h1 class="heading">about</h1>
+      <div class="about-content">
+        <div class="opening">
+          <div class="quote">
+            <h1>Not Every Skill Has The Same Value For Every Role.</h1>
+            <p>
+              Learning web development often means coming across a long list of
+              technologies. But when you're targeting a specific role, the real
+              question is:<span style="color: #7834b2"
+                >Which skills actually matter for that role?</span
+              >
+            </p>
+            <div class="question">
+              <p>
+                <span style="color: #7834b2">“</span> Do I have the skills this
+                role <br />
+                actually requires?<span style="color: #7834b2"> ”</span>
+              </p>
+            </div>
+          </div>
+          <img src="images/about.png" alt="image" />
+        </div>
+        <div class="idea">
+          <h2>SkillCheck was created to answer that question.</h2>
+          <p>
+            It focuses on comparing a user's current skill set with the skills
+            expected for a selected role. Rather than treating every skill
+            equally, each role has its own set of relevant skills and
+            priorities.
+          </p>
+        </div>
+        <div class="built-with">
+          <div>
+            <h2>Designed With A Frontend Focus</h2>
+            <p>
+              SkillCheck is built around the core technologies used in modern
+              web development and demonstrates how HTML, CSS, and JavaScript can
+              be combined to create an interactive, responsive, and useful web
+              application.
+            </p>
+          </div>
+          <div class="skills-icons">
+            <div class="skill-img">
+              <img src="images/html.png" alt="html icon" />
+              <p style="color: #e86f00">HTML</p>
+              <p>Structure of web</p>
+            </div>
+            <div class="skill-img">
+              <img src="images/css.png" alt="css icon" />
+              <p style="color: rgb(59, 59, 238)">CSS</p>
+              <p>style and design</p>
+            </div>
+            <div class="skill-img">
+              <img src="images/js.png" alt="JS icon" />
+              <p style="color: gold">JavaScript</p>
+              <p>Logic and Interactivity</p>
+            </div>
+          </div>
+        </div>
+        <div class="closing">
+          <p>
+            You don't always need to learn everything. You need to know what
+            matters for where you're going.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--lick the extenal js to the code-->
+    <script src="script.js" charset="UTF-8"></script>
+  </body>
+</html>
