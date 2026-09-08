@@ -573,14 +573,14 @@ header .navbar a.active{
         font-size: 3rem;
     }
     .home{
-        min-height: 120vh;
+        min-height: 110vh;
     }
     .home_content {
         grid-template-columns: 1fr;
         
     }
     .home_content h3,.home_content h3 .check_home{
-        font-size: 5.5 rem;
+        font-size: 5rem;
     }
     .left_content img{
         width: 15rem;
