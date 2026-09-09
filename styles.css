@@ -239,7 +239,7 @@ section{
      padding: 3rem 4rem 0 2rem;
      border: .5rem solid ;
      border-radius: 2%;
-     transition: all 0.5s ease;/*smoothly animate the role when showing/hiding 
+     transition: all 0.5s ease;/*smoothly animate the role when showing/hiding */
 }
 .role:hover{
     transform:scale(1.03);/*when card is hover with mouse card will zoom in*/
